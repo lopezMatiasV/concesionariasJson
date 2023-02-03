@@ -49,5 +49,5 @@ app.use((req, res, next) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Servidor levantado en el puerto ${PORT}\nLink: http://localhost:3000/`)
+    console.log(`Servidor levantado en el puerto ${PORT}\nLink: http://localhost:${port}/`)
 })
