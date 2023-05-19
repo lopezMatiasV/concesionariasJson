@@ -7,14 +7,14 @@ let session = require('express-session')
 let cookieParser = require('cookie-parser')
 
 /* Enrutadores */
-let autosRouter = require('./routes/autos');
-let homeRouter = require('./routes/home');
-let sucursalesRouter = require('./routes/sucursales');
-let usersRouter = require('./routes/users')
-let adminSucursalesRouter = require('./routes/adminSucursales');
-let adminAutosRouter = require('./routes/adminAutos')
-let adminUsersRouter = require('./routes/adminUsers')
-let { cookieCheck, adminCheck } = require('./middlewares/usersMiddlewares')
+let autosRouter = require('./src/routes/autos');
+let homeRouter = require('./src/routes/home');
+let sucursalesRouter = require('./src/routes/sucursales');
+let usersRouter = require('./src/routes/users')
+let adminSucursalesRouter = require('./src/routes/adminSucursales');
+let adminAutosRouter = require('./src/routes/adminAutos')
+let adminUsersRouter = require('./src/routes/adminUsers')
+let { cookieCheck, adminCheck } = require('./src/middlewares/usersMiddlewares')
 
 /* Vistas */
 app.set('views', path.join(__dirname, 'views'));
@@ -49,5 +49,5 @@ app.use((req, res, next) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Servidor levantado en el puerto ${PORT}\nLink: http://localhost:${port}/`)
+    console.log(`Servidor levantado en el puerto ${PORT}\nLink: http://localhost:${PORT}/`)
 })
